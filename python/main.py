@@ -32,7 +32,7 @@ cap = cv.VideoCapture(0)
 out = cv.VideoWriter('output/output.avi', cv.VideoWriter_fourcc('M', 'J', 'P', 'G'), 1.0, (640, 360))
 
 if not cap.isOpened():
-    print("Cannot open camera")
+    print("ERROR! Cannot open camera")
     exit()
 
 #%% Loop through each frame
