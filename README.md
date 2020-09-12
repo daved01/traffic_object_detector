@@ -1,3 +1,3 @@
-# Real time traffic sign detection
-Detect North American and German traffic signs in real time.
+# Real time stop sign detection
+Detect North American and German stop signs in real time.
 
