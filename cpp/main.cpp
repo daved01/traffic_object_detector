@@ -3,6 +3,9 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/opencv.hpp>
 #include <iostream>
+
+#include <memory>
+#include <torch/script.h>
 //#include <stdio.h>
 
 using namespace cv;
@@ -13,6 +16,22 @@ int main()
     // Variables
     Size s = Size((int) 640, (int) 360);
     int frame_num = 10;
+    // File containing the object detection model being imported via torchscript (*.pt)
+    const char* model_file = "fasterrcnn50fpn.pt";
+
+    // Import object detection model model from .pt file
+    torch::jit::script::Module model;
+    try {
+        model = torch::jit::load(model_file);
+    }
+    catch (const c10::Error& e) {
+        std::cerr << "Error in loading the model\n";
+    }
+
+    std::cout << "Model import success!\n";
+
+
+
     
     // Open video from webcam
     Mat frame; // Create header part
@@ -40,6 +59,8 @@ int main()
         cerr << "Could not open the output video file for write\n";
         return -1;
     }
+
+
     
 
     // Loop through each frame
@@ -64,7 +85,11 @@ int main()
             /*
             Bounding box prediction
             */
+<<<<<<< HEAD
         
+=======
+        // normalize()
+>>>>>>> 79d8afc91f0207be0a363cddfe710792466d0cff
 
 
 
