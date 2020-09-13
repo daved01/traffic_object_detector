@@ -16,6 +16,7 @@ int main()
     // Variables
     Size s = Size((int) 640, (int) 360);
     int frame_num = 10;
+    // File containing the object detection model being imported via torchscript (*.pt)
     const char* model_file = "fasterrcnn50fpn.pt";
 
     // Import object detection model model from .pt file
