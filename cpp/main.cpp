@@ -17,22 +17,20 @@ int main()
     Size s = Size((int) 640, (int) 360);
     int frame_num = 10;
     // File containing the object detection model being imported via torchscript (*.pt)
-    const char* model_file = "fasterrcnn50fpn.pt";
-
+    const char* model_file = "/Users/David/Repositories/traffic_object_detector/cpp/build/fasterrcnn50fpn.pt";
     // Import object detection model model from .pt file
     torch::jit::script::Module model;
+    
     try {
         model = torch::jit::load(model_file);
+        std::cout << "Model import success!\n";
     }
     catch (const c10::Error& e) {
         std::cerr << "Error in loading the model\n";
+        return -1;
     }
 
-    std::cout << "Model import success!\n";
 
-
-
-    
     // Open video from webcam
     Mat frame; // Create header part
     // ---- INITIALIZE VIDEOCAPTURE AND VIDEOWRITER
