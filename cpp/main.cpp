@@ -85,11 +85,7 @@ int main()
             /*
             Bounding box prediction
             */
-<<<<<<< HEAD
-        
-=======
         // normalize()
->>>>>>> 79d8afc91f0207be0a363cddfe710792466d0cff
 
 
 
