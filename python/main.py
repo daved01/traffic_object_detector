@@ -53,6 +53,8 @@ while True:
         frame = formatter.rescale_frame(frame, percent=50)
         frame_normed = cv.normalize(frame, frame, 0, 255, cv.NORM_MINMAX) 
         frame_normed = ToTensor()(frame_normed)
+	
+        print(frame_normed.shape)
 
         im_list = []
         im_list.append(frame_normed)

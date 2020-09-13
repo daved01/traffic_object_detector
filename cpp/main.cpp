@@ -28,7 +28,7 @@ int main()
     
     // Set up video output
     VideoWriter out;
-    string pathout = "/Users/David/Repositories/traffic_sign_detector/cpp/build/output/output.avi";
+    string pathout = "/Users/David/Repositories/traffic_object_detector/cpp/build/output/output.avi";
     int codec = VideoWriter::fourcc('M', 'J', 'P', 'G');
     
     //Size s = Size((int) cap.get(CAP_PROP_FRAME_WIDTH), cap.get(CAP_PROP_FRAME_HEIGHT));
@@ -64,7 +64,7 @@ int main()
             /*
             Bounding box prediction
             */
-        normalize()
+        
 
 
 
@@ -77,7 +77,7 @@ int main()
         }
         cout << "No image" << endl;
 
-        counter = counter + 1;
+        counter++;
 
         if (waitKey(5) >= 0)
             break;
