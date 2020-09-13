@@ -171,3 +171,4 @@ python/output/
 cpp/build/
 cpp/.vscode/
 dev/
+cpp/CMakeLists.txt
